@@ -13,14 +13,14 @@ policies:
   - or:
     - tag:Data Type: empty
 
-- name: aws-s3-invalid-tag-specification-report
+- name: aws-s3-data-type-invalid-tag-report
   resource: aws.s3
   description: Identifies missing required data type tag.
   filters:
   - or:
     - tag:Data Type: empty
 
-- name: aws-ib-dynamodb-table-taggingspec-tag-version-1-2-1
+- name: aws-dynamodb-data-type-invalid-tag-report
   resource: aws.dynamodb-table
   description: Identifies missing required data type tag.
   filters:
