@@ -1,0 +1,28 @@
+policies:
+- name: aws-ec2-data-type-invalid-tag-report
+  resource: aws.ec2
+  description: Identifies missing required data type tag.
+  filters:
+  - or:
+    - tag:Data Type: empty
+
+- name: aws-rds-data-type-invalid-tag-report
+  resource: aws.rds
+  description: Identifies missing required data type tag.
+  filters:
+  - or:
+    - tag:Data Type: empty
+
+- name: aws-s3-invalid-tag-specification-report
+  resource: aws.s3
+  description: Identifies missing required data type tag.
+  filters:
+  - or:
+    - tag:Data Type: empty
+
+- name: aws-ib-dynamodb-table-taggingspec-tag-version-1-2-1
+  resource: aws.dynamodb-table
+  description: Identifies missing required data type tag.
+  filters:
+  - or:
+    - tag:Data Type: empty
